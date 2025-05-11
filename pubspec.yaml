@@ -1,0 +1,31 @@
+name: app_a
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  supabase_flutter: ^2.7.0
+  file_picker: ^8.1.2
+  image_picker: ^1.1.2
+  geolocator: ^13.0.1
+  get: ^4.6.6
+  uuid: ^4.5.0
+  flutter_spinkit: ^5.2.1
+  json_annotation: ^4.9.0
+  permission_handler: ^11.3.1 # Added for camera permission handling
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.12
+  json_serializable: ^6.8.0
+
+flutter:
+  uses-material-design: true
