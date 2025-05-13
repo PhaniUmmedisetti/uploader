@@ -8,7 +8,6 @@ import '../services/database_service.dart';
 class AppBindings extends Bindings {
   @override
   void dependencies() {
-    // Use Get.put() to instantiate immediately instead of Get.lazyPut()
     Get.put<LocationService>(LocationService());
     Get.put<StorageService>(StorageService());
     Get.put<DatabaseService>(DatabaseService());

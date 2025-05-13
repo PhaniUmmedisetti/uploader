@@ -13,7 +13,8 @@ class MainScreen extends StatefulWidget {
   State<MainScreen> createState() => _MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateMixin {
+class _MainScreenState extends State<MainScreen>
+    with SingleTickerProviderStateMixin {
   int _selectedIndex = 0;
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
@@ -56,7 +57,8 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
       () => Scaffold(
         appBar: AppBar(
           title: Text(
-            AppTranslations.translate('appTitle', languageController.locale.value),
+            AppTranslations.translate(
+                'appTitle', languageController.locale.value),
             style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
@@ -98,7 +100,8 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
                     ),
                     const SizedBox(height: 20),
                     Text(
-                      AppTranslations.translate('welcomeMessage', languageController.locale.value),
+                      AppTranslations.translate(
+                          'welcomeMessage', languageController.locale.value),
                       style: TextStyle(
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
@@ -107,7 +110,8 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      AppTranslations.translate('descriptionMessage', languageController.locale.value),
+                      AppTranslations.translate('descriptionMessage',
+                          languageController.locale.value),
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.white.withOpacity(0.7),
@@ -138,11 +142,13 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
               items: [
                 BottomNavigationBarItem(
                   icon: const Icon(Icons.upload),
-                  label: AppTranslations.translate('uploadTab', languageController.locale.value),
+                  label: AppTranslations.translate(
+                      'uploadTab', languageController.locale.value),
                 ),
                 BottomNavigationBarItem(
                   icon: const Icon(Icons.history),
-                  label: AppTranslations.translate('historyTab', languageController.locale.value),
+                  label: AppTranslations.translate(
+                      'historyTab', languageController.locale.value),
                 ),
               ],
               currentIndex: _selectedIndex,
@@ -152,7 +158,8 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
               onTap: _onItemTapped,
               elevation: 0,
               selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w600),
-              unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w400),
+              unselectedLabelStyle:
+                  const TextStyle(fontWeight: FontWeight.w400),
               showUnselectedLabels: true,
             ),
           ),
